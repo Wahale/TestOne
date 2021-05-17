@@ -1,0 +1,30 @@
+﻿<Window x:Class="TestOne.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestOne"
+        mc:Ignorable="d"
+        Title="Contacts" Height="468" Width="1107.353" Loaded="Window_Loaded">
+    <Grid Margin="0,0,0,-21">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="118*"/>
+            <ColumnDefinition Width="232*"/>
+            <ColumnDefinition Width="605*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="dateGrid1" FontSize="16" FontWeight="Bold" Margin="10,10,10,80" AutoGenerateColumns="False" Grid.ColumnSpan="3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path = Text}" IsReadOnly="False" Header="FIO" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Path = Age}" IsReadOnly="False" Header="Age" Width="50"/>
+                <DataGridTextColumn Binding="{Binding Path = Register}" IsReadOnly="False" Header="Register Adress" Width="150"/>
+                <DataGridTextColumn Binding="{Binding Path = Current}" IsReadOnly="False" Header="Current Adress" Width="150"/>
+                <DataGridTextColumn Binding="{Binding Path = Phone}" IsReadOnly="False" Header="Phone" Width="120"/>
+                <DataGridTextColumn Binding="{Binding Path = Email}" IsReadOnly="False" Header="E-mail" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Path = CreationDate}" IsReadOnly="False" Header="CreationDate" Width="180"/>
+                <DataGridTextColumn Binding="{Binding Path = Goden}" IsReadOnly="False" Header="Goden" Width="180"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Add Coluem" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Width="98" />
+        <TextBox Name="textBox1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+    </Grid>
+</Window>
